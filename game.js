@@ -2,7 +2,6 @@ const crypto = require('crypto');
 const readline = require('readline');
 const AsciiTable = require('ascii-table');
 
-// Simple die representation
 class Die {
   constructor(faces) {
     this.faces = faces;
