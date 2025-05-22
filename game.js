@@ -15,7 +15,6 @@ class Die {
   }
 }
 
-// Parse dice from command-line args
 class DiceParser {
   static parse(args) {
     if (args.length < 3) throw new Error('At least 3 dice required. Example: node game.js 2,2,4,4,9,9 6,8,1,1,8,6 7,5,3,7,5,3');
@@ -31,7 +30,6 @@ class DiceParser {
   }
 }
 
-// Cryptographic utilities
 class CryptoUtils {
   static generateKey() {
     return crypto.randomBytes(32);
@@ -44,7 +42,6 @@ class CryptoUtils {
   }
 }
 
-// User interface for prompts
 class ConsoleUI {
   static rl = readline.createInterface({ input: process.stdin, output: process.stdout });
   
@@ -68,7 +65,6 @@ class ConsoleUI {
   }
 }
 
-// Fair random number generation
 class FairRandomGenerator {
   constructor(rangeMax, dice) {
     this.rangeMax = rangeMax;
@@ -86,7 +82,6 @@ class FairRandomGenerator {
   }
 }
 
-// Probability calculations
 class ProbabilityCalculator {
   static calculateWinProbability(die1, die2) {
     const wins = die1.faces.flatMap(x => die2.faces.map(y => x > y)).filter(Boolean).length;
@@ -103,7 +98,6 @@ class ProbabilityCalculator {
   }
 }
 
-// Game logic
 class Game {
   constructor(dice) {
     this.dice = dice;
@@ -155,11 +149,11 @@ class Game {
   }
 }
 
-// Start game
+
 try {
   const dice = DiceParser.parse(process.argv.slice(2));
   new Game(dice).play();
 } catch (e) {
   console.error('Error:', e.message);
-  process.exit(1);  // Exit the process with an error code
+  process.exit(1); 
 }
