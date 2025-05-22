@@ -35,5 +35,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayedmahamudsijan/dice-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sayedmahamudsijan/dice-game/issues"
+  },
+  "homepage": "https://github.com/sayedmahamudsijan/dice-game#readme",
   "description": ""
 }
