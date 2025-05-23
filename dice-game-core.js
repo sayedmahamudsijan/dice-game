@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const FairRandomGenerator = require('./fair-dice-roll');
 const CryptoUtils = require('./crypto-tools');
 const ConsoleUI = require('./game-console');
@@ -18,10 +19,10 @@ class Game {
     if (isUserFirst) {
       const userChoice = await ConsoleUI.prompt('Pick your die:', options(), this.dice);
       this.userDie = this.availableDice.splice(userChoice, 1)[0];
-      this.computerDie = this.availableDice.splice(CryptoUtils.generateRandomInt(this.availableDice.length), 1)[0];
+      this.computerDie = this.availableDice.splice(crypto.randomInt(0, this.availableDice.length), 1)[0];
       console.log(`You chose [${this.userDie}]. I take [${this.computerDie}].`);
     } else {
-      this.computerDie = this.availableDice.splice(CryptoUtils.generateRandomInt(this.availableDice.length), 1)[0];
+      this.computerDie = this.availableDice.splice(crypto.randomInt(0, this.availableDice.length), 1)[0];
       console.log(`\nI pick [${this.computerDie}]`);
       const userChoice = await ConsoleUI.prompt('Pick your die:', options(), this.dice);
       this.userDie = this.availableDice[userChoice];
