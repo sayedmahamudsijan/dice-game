@@ -10,7 +10,7 @@ class CryptoUtils {
   static generateRandomInt(max) {
     if (max < 0) throw new Error('Max must be non-negative');
     const range = max + 1;
-    const threshold = (-(range % 256)) % 256; // Adjust for modulo bias
+    const threshold = (-(range % 256)) % 256; 
     let bytes;
     do {
       bytes = crypto.randomBytes(4);
