@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-const KEY_SIZE_BYTES = 32; // Constant for key size (256 bits)
+const KEY_SIZE_BYTES = 32; 
 
 class CryptoUtils {
   static generateKey() {
