@@ -1,0 +1,17 @@
+{
+  "name": "non-transitive-dice-game",
+  "version": "1.0.0",
+  "main": "crypto-tools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ascii": "^1.0.0",
+    "ascii-table": "^0.0.9",
+    "table": "^6.9.0"
+  },
+  "description": ""
+}
